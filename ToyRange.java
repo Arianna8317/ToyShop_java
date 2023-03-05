@@ -57,4 +57,11 @@ public class ToyRange {
         }
     }
 
+    public void setWeight(String name, int weight){
+        for (Toy toy : toys) {
+            if (toy.getName().equals(name)) {
+                toy.setWeight(weight);
+            }
+        }
+    }
 }

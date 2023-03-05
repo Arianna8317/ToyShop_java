@@ -37,7 +37,10 @@ public class Toy {
     public void changeAmount(int decrement) {
         this.amount += decrement;
     }
-
+    
+    public String getName(){
+        return this.name;
+    }
 
     @Override
     public String toString() {
