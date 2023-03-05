@@ -23,6 +23,7 @@ public class ToyRange {
 
     public void saveToyChosenForLottery() {
         Toy toy = pickToyForLottery();
+        toy.changeAmount(-1); 
         String text = toy.toString();
         try(FileWriter writer = new FileWriter("ToyShop\\Toys.txt", true))
         { 
@@ -34,7 +35,6 @@ public class ToyRange {
 
             System.out.println(ex.getMessage());
         }
-        toy.changeAmount(-1); 
     }
 
     public Toy pickToyForLottery() {
@@ -50,6 +50,11 @@ public class ToyRange {
         }
         throw new RuntimeException("Should never be shown.");
     }
-
+   
+    public void RunLottery ( int itemsNumber) {
+        for ( int i=0; i< itemsNumber; i++) {
+            this.saveToyChosenForLottery();
+        }
+    }
 
 }
