@@ -45,7 +45,7 @@ public class ToyRange {
         double countWeight = 0.0;
         for (Toy toy : toys) {
             countWeight += toy.getWeight();
-            if (countWeight >= r)
+            if (countWeight >= r && toy.getAmount() >0 )
                 return toy;
         }
         throw new RuntimeException("Should never be shown.");
