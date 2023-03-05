@@ -41,6 +41,6 @@ public class Toy {
 
     @Override
     public String toString() {
-        return "Игрушка [id=" + id + ", название = " + name + ", количество =" + amount + "]"; 
+        return "Для лотереи выбрана игрушка " + name + ", оставшееся количество =" + amount ; 
     }
 }
